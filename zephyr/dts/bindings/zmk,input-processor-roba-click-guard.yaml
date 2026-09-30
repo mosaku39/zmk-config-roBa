@@ -6,5 +6,6 @@ include: base.yaml
 
 properties:
   "#input-processor-cells":
+    type: int
     const: 0
     description: No parameters.
