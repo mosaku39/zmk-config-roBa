@@ -70,10 +70,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                 &kp T                                                        &kp Y            &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                 &kp G        &kp PRINTSCREEN             &kp F8              &kp H            &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                 &kp B        &mt LEFT_SHIFT F6           &mt RIGHT_SHIFT F7  &kp N            &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 DEL  &lt 2 LANG1  &lt_to_layer_0 1 SPACE      &lt 3 ENTER         &lt 6 BACKSPACE                             &kp LANGUAGE_2
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                        &kp Y            &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                   &kp G        &kp PRINTSCREEN             &kp F8              &kp H            &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mt LEFT_SHIFT F6           &mt RIGHT_SHIFT F7  &kp N            &kp M  &kp COMMA  &kp DOT  &lt 4 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 LANG1  &lt_to_layer_0 1 SPACE      &lt 3 ENTER         &lt 6 BACKSPACE                             &lt 4 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -110,10 +110,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans             &trans                                 &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &to_layer_0 LANG2  &to_layer_0 LANG1  &trans      &trans  &trans                                &trans
             >;
         };
 
