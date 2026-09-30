@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE_CLICK_GUARD 8
-#define MOUSE_CLICK_GUARD_MS 100
+#define MOUSE_CLICK_GUARD_MS 2000
 
 &mt {
     flavor = "balanced";
