@@ -1,7 +1,7 @@
 name: roBa
 build:
-  cmake: .
-  kconfig: Kconfig
+  cmake: zephyr
+  kconfig: zephyr/Kconfig
   settings:
-    board_root: ..
-    dts_root: .
+    board_root: .
+    dts_root: zephyr
