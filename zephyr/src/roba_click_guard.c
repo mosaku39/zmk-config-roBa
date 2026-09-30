@@ -14,18 +14,46 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 #include <drivers/input_processor.h>
-#include <zmk/keymap.h>
 
-static int roba_click_guard_handle_event(const struct device *dev,
-                                         struct input_event *event,
-                                         uint32_t layer,
-                                         uint32_t param2,
-                                         struct zmk_input_processor_state *state) {
+#include <zmk/event_manager.h>
+#include <zmk/events/layer_state_changed.h>
+
+static bool roba_click_guard_active;
+
+static int roba_click_guard_layer_listener(const zmk_event_t *eh) {
+    struct zmk_layer_state_changed *ev;
+
+    ev = as_zmk_layer_state_changed(eh);
+    if (ev == NULL) {
+        return ZMK_EV_EVENT_BUBBLE;
+    }
+
+    /*
+     * Layer 8 is the mouse-click guard layer.
+     */
+    if (ev->layer == 8) {
+        roba_click_guard_active = ev->state;
+    }
+
+    return ZMK_EV_EVENT_BUBBLE;
+}
+
+ZMK_LISTENER(roba_click_guard_layer, roba_click_guard_layer_listener);
+ZMK_SUBSCRIPTION(roba_click_guard_layer, zmk_layer_state_changed);
+
+static int roba_click_guard_handle_event(
+    const struct device *dev,
+    struct input_event *event,
+    uint32_t param1,
+    uint32_t param2,
+    struct zmk_input_processor_state *state) {
+
     ARG_UNUSED(dev);
+    ARG_UNUSED(param1);
     ARG_UNUSED(param2);
     ARG_UNUSED(state);
 
-    if (!zmk_keymap_layer_active((zmk_keymap_layer_id_t)layer)) {
+    if (!roba_click_guard_active) {
         return ZMK_INPUT_PROC_CONTINUE;
     }
 
