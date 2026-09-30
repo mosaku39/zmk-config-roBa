@@ -88,6 +88,7 @@
         roba_mouse_click_guard: roba_mouse_click_guard {
             compatible = "zmk,input-processor-roba-click-guard";
             #input-processor-cells = <0>;
+            track-remainders;
         };
     };
 
