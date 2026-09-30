@@ -10,6 +10,6 @@ properties:
     const: 0
     description: No parameters.
 
-track-remainders:
+  track-remainders:
     type: boolean
     description: Whether the processor tracks input remainders.
