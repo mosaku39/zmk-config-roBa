@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define MOUSE_CLICK_GUARD 8
+#define MOUSE_CLICK_GUARD_MS 100
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -51,6 +54,13 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+    };
+
+    input_processors {
+        roba_mouse_click_guard: roba_mouse_click_guard {
+            compatible = "zmk,input-processor-roba-click-guard";
+            #input-processor-cells = <1>;
         };
     };
 
