@@ -1,0 +1,10 @@
+description: Suppress relative X/Y movement while a configured ZMK layer is active.
+
+compatible: "zmk,input-processor-roba-click-guard"
+
+include: base.yaml
+
+properties:
+  "#input-processor-cells":
+    const: 1
+    description: Layer index to use as the guard state.
