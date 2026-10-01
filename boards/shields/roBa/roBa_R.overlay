@@ -19,6 +19,10 @@
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        click-assist {
+            layers = <CLICK>;
+            input-processors = <&zip_xy_scaler 0 1>;
+        };
     };
 };
 
