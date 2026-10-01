@@ -71,9 +71,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                        &kp Y          &kp U  &lt 5 I    &kp O         &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &kp PRINTSCREEN             &kp F8              &kp H          &kp J  &kp K      &lt 4 L       &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mt LEFT_SHIFT F6           &mt RIGHT_SHIFT F7  &kp N          &kp M  &kp COMMA  &lt 4 PERIOD  &lt 4 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 LANG1  &lt_to_layer_0 1 SPACE      &lt 3 ENTER         &kp BACKSPACE                                  &lt 4 DELETE
+&kp A             &kp S         &kp D         &kp F                   &kp G        &kp PRINTSCREEN             &kp F8              &kp H          &kp J  &kp K      &lt 4 L       &lt 8 MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mt LEFT_SHIFT F6           &mt RIGHT_SHIFT F7  &kp N          &kp M  &kp COMMA  &lt 4 PERIOD  &lt 8 SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 LANG1  &lt_to_layer_0 1 SPACE      &lt 3 ENTER         &kp BACKSPACE                                  &lt 6 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -141,6 +141,15 @@
 &kp DOLLAR       &kp PERCENT   &kp CARET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans              &kp SEMI   &kp COLON        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK
 &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION        &kp EQUAL  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS
 &kp LCTRL        &kp LGUI      &kp LALT   &trans                &kp BACKSLASH          &kp UNDERSCORE      &kp COMMA  &kp PERIOD                                                          &kp PLUS
+            >;
+        };
+
+        CLICK {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans        &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1      &mkp MB2  &mkp MB3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp NUMBER_9  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &trans
             >;
         };
     };
