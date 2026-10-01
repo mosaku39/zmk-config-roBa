@@ -65,6 +65,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+
             label = "CLICK_ASSIST";
         };
     };
@@ -133,10 +134,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans             &trans                                 &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans
-&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &to_layer_0 LANG2  &to_layer_0 LANG1  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans             &trans                                 &trans  &trans             &trans             &trans             &trans
+&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &click_assist MB1  &click_assist MB2  &click_assist MB3  &trans
+&trans  &trans  &trans  &trans             &trans             &trans      &trans  &trans  &trans             &trans             &trans             &trans
+&trans  &trans  &trans  &to_layer_0 LANG2  &to_layer_0 LANG1  &trans      &trans  &trans                                                           &trans
             >;
         };
 
