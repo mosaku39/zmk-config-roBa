@@ -21,7 +21,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         click-assist {
-            layers = <CLICK>;
+            layers = <8>;
             input-processors = <&zip_xy_scaler 0 1>;
         };
     };
