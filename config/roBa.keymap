@@ -19,6 +19,7 @@
             <&kp LEFT_ARROW>,
             <&kp UP_ARROW>,
             <&kp DOWN_ARROW>;
+
         tick = <10>;
         wait-ms = <5>;
         tap-ms = <5>;
@@ -73,7 +74,7 @@
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                                        &kp Y          &kp U  &lt 5 I    &kp O         &kp P
 &kp A             &kp S         &kp D         &kp F                   &kp G        &kp PRINTSCREEN             &kp F8              &kp H          &kp J  &kp K      &lt 4 L       &lt 8 MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &mt LEFT_SHIFT F6           &mt RIGHT_SHIFT F7  &kp N          &kp M  &kp COMMA  &lt 4 PERIOD  &lt 8 SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 LANG1  &lt_to_layer_0 1 SPACE      &lt 3 ENTER         &kp BACKSPACE                                  &lt 6 DELETE
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 3 LANG1  &lt_to_layer_0 1 SPACE      &lt 2 ENTER         &kp BACKSPACE                                  &lt 6 DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -88,6 +89,15 @@
             >;
         };
 
+        symbols {
+            bindings = <
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                                          &kp CARET  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp QUESTION     &kp PIPE     &kp TILDE  &kp COLON   &kp MINUS       &trans             &kp INT_YEN       &kp PLUS   &kp DOUBLE_QUOTES  &kp PERIOD    &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp FSLH         &kp BSLH     &kp GRAVE  &kp SEMI    &kp UNDERSCORE  &kp LESS_THAN      &kp GREATER_THAN  &kp EQUAL  &kp SQT            &kp COMMA     &kp LBKT              &kp RBKT
+&kp LCTRL        &kp LGUI     &kp LALT   &trans      &trans          &trans             &trans            &trans                                                            &kp RIGHT_SHIFT
+            >;
+        };
+
         ARROW {
             bindings = <
 &kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
@@ -97,15 +107,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
-        };
-
-        symbols {
-            bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH   &kp DOLLAR  &kp PERCENT                                          &kp CARET  &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp QUESTION     &kp PIPE     &kp TILDE  &kp COLON   &kp MINUS       &trans             &kp INT_YEN       &kp PLUS   &kp DOUBLE_QUOTES  &kp PERIOD    &kp LEFT_BRACE        &kp RIGHT_BRACE
-&kp FSLH         &kp BSLH     &kp GRAVE  &kp SEMI    &kp UNDERSCORE  &kp LESS_THAN      &kp GREATER_THAN  &kp EQUAL  &kp SQT            &kp COMMA     &kp LBKT              &kp RBKT
-&kp LCTRL        &kp LGUI     &kp LALT   &trans      &trans          &trans             &trans            &trans                                                            &kp RIGHT_SHIFT
-            >;
         };
 
         MOUSE {
