@@ -59,7 +59,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&sl_ms CLICK>,
+                <&sl_ms 8>,
                 <&macro_press>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
