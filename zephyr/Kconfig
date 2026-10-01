@@ -1,7 +1,0 @@
-config ZMK_ROBA_CLICK_GUARD
-    bool "roBa mouse-click trackball guard"
-    default y
-    depends on ZMK_POINTING
-    help
-      Suppresses PMW3610 X/Y movement for a short period after a mouse
-      button macro starts. The keymap activates the guard layer.
