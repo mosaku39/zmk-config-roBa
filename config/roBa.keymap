@@ -12,6 +12,9 @@
     automouse-layer = <4>;
     scroll-layers = <5>;
 
+    automouse-threshold = <8>;
+    automouse-delay-ms = <50>;
+
     arrows {
         layers = <3>;
         bindings =
