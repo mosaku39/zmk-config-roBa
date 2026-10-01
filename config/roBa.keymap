@@ -53,6 +53,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        click_assist: click_assist {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&sl_ms CLICK>,
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+            label = "CLICK_ASSIST";
+        };
     };
 
     behaviors {
@@ -63,6 +77,14 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        sl_ms: sl_ms {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SL_MS";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <10000>;
         };
     };
 
