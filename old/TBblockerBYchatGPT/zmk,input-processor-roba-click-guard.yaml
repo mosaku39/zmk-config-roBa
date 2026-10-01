@@ -1,0 +1,15 @@
+description: Suppress relative X/Y movement while the processor is active.
+
+compatible: "zmk,input-processor-roba-click-guard"
+
+include: base.yaml
+
+properties:
+  "#input-processor-cells":
+    type: int
+    const: 0
+    description: No parameters.
+
+  track-remainders:
+    type: boolean
+    description: Whether the processor tracks input remainders.
